@@ -30,13 +30,13 @@ docker compose up -d
 To run database migrations. "D:/Projects/go" should be replaced with your local path to the project.
 
 ```bash
-docker run -v D:/Projects/af1-spider-web-app/migrations:/migrations --network host migrate/migrate -path=/migrations/ -database "postgres://postgres.urjlgixtbwscphmxmbcf:74Lc7fYjxB3XaYY@aws-0-eu-central-1.pooler.supabase.com:5432/postgres" up
+docker run -v D:/Projects/af1-spider-web-app/migrations:/migrations --network host migrate/migrate -path=/migrations/ -database "<your-postgres-address>" up
 ```
 
 To clear the database:
 
 ```bash
-docker run -v D:/Projects/af1-spider-web-app/migrations:/migrations --network host migrate/migrate -path=/migrations/ -database "postgres://postgres.urjlgixtbwscphmxmbcf:74Lc7fYjxB3XaYY@aws-0-eu-central-1.pooler.supabase.com:5432/postgres" down -all
+docker run -v D:/Projects/af1-spider-web-app/migrations:/migrations --network host migrate/migrate -path=/migrations/ -database "<your-postgres-address>" down -all
 ```
 
 To start the API:
